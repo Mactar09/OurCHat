@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OurCHat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- En-tête -->
+        <header>
+            <div class="logo">OCH</div>
+            <button id="logout-btn" class="btn-logout">Quitter</button>
+        </header>
+
+        <!-- Zone de messages -->
+        <main id="chat-container">
+            <!-- Les messages sont injectés ici par JS -->
+            <div style="text-align: center; color: #94a3b8; margin-top: 50px; font-size: 0.8rem;">
+                Chargement du flux sécurisé...
+            </div>
+        </main>
+
+        <!-- Zone de saisie -->
+        <div class="input-area">
+            <input type="text" id="msg-input" placeholder="Écrivez quelque chose..." autocomplete="off">
+            <button id="send-btn" class="btn-send">
+                <!-- Icone Envoyer SVG -->
+                <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+            </button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        // Enregistrement PWA minimal
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(err => console.log('SW fail', err));
+        }
+    </script>
+</body>
+</html>
+
