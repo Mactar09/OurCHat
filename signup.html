@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - OCH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="auth-box">
+            <h2>Créer un compte <span>OCH</span></h2>
+            <p class="subtitle">Rejoignez la communauté maintenant.</p>
+            
+            <form id="signup-form">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Pseudo public" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Mot de passe (6+ chars)" required>
+                </div>
+                <button type="submit" class="btn-primary">S'inscrire</button>
+            </form>
+
+            <div class="link-text">
+                Déjà un compte ? <a href="login.html">Se connecter</a>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
